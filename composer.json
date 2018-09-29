@@ -1,0 +1,44 @@
+{
+    "name": "superbig/craft-dumpserver",
+    "description": "Brings Symfony’s Var-Dump Server to Craft",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "dump server"
+    ],
+    "support": {
+        "docs": "https://github.com/superbigco/dump-server/blob/master/README.md",
+        "issues": "https://github.com/superbigco/dump-server/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superbig",
+            "homepage": "https://superbig.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "symfony/var-dumper": "^4.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "superbig\\dumpserver\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Dump Server",
+        "handle": "dump-server",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/superbigco/dump-server/master/CHANGELOG.md",
+        "components": {
+            "dumpServerService": "superbig\\dumpserver\\services\\DumpServerService"
+        },
+        "class": "superbig\\dumpserver\\DumpServer"
+    }
+}
